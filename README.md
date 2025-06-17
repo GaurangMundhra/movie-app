@@ -1,12 +1,56 @@
-# React + Vite
+# 🎬 Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive movie search web app built with **React**, **TailwindCSS**, and **Appwrite**, using the **TMDB API** to deliver real-time movie data. Users can search movies, check what's trending, and view recently released films — all in a seamless UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Search for your favorite movies
+- 📈 Dynamic updates based on **trending searches**
+- 🆕 View the **most recently added** or **released** content
+- 🖼️ Movie details include:
+  - Poster
+  - Title
+  - Release date
+  - Rating
+  - Original language
+- 💡 Smooth UX:
+  - Lazy loading
+  - Debouncing search input
+  - Loading spinners for async operations
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer     | Tool/Library       |
+|-----------|--------------------|
+| Frontend  | React, TailwindCSS |
+| API       | TMDB (The Movie Database) |
+| Backend   | Appwrite           |
+| Utilities | react-use (for debouncing) |
+
+## ⚙️ Core Concepts Used
+
+- React Hooks: `useState`, `useEffect`
+- Debounced API calls using `useDebounce`
+- Appwrite as a lightweight backend to store and update **search counts**
+- Reusable components: `Search`, `MovieCard`, `Spinner`
+
+## 📦 Getting Started
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/movie-app.git
+cd movie-app
+
+# 2. Install dependencies
+npm install
+
+# 3. Set up environment variables
+# Create a .env file and add the following
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key
+
+# (Optional) For Appwrite backend integration
+REACT_APP_APPWRITE_ENDPOINT=your_appwrite_endpoint
+REACT_APP_APPWRITE_PROJECT_ID=your_project_id
+
+# 4. Run the app
+npm run dev
